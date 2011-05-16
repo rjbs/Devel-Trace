@@ -11,6 +11,8 @@ print "ok 1\n";
 
 ######################### End of black magic.
 
+exit if $ENV{AUTOMATED_TESTING};
+
 open S, "< sample" or die "Couldn't open sample demo file: $!; aborting";
 print while <S>;
 close S;
